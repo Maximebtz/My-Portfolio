@@ -20,15 +20,32 @@
 *::-webkit-scrollbar-thumb {
     background: gray;
     border-radius: 7px;
-
     z-index: 5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --deep-blue: #02030A;
+    --white: ghostwhite;
+    --light-gray: rgb(170, 170, 170);
+
 }
 
 /************** Body **************/
 body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
+    background-color: var(--deep-blue);
+    color: var(--white);
+    font-size: medium;
 
+    a {
+        color: var(--light-gray);
+        transition: all .2s ease-in-out;
+    }
 }
 
 /************** Header **************/
@@ -38,71 +55,200 @@ body {
 
 
 
-
-/************** Section 1 **************/
-.section-1 {
-    height: 100vh;
-    backdrop-filter: brightness(1);
-    display: flex;
-    align-items: center;
+main {
     overflow: hidden;
-    position: relative;
-    
-    // figure {
-    //     height: 100vh;
-    //     width: 100%;
-    //     position: absolute !important;
-    //     top: 0;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     position: relative;
-    //     z-index: 0;
-    //     box-shadow: 0 0 500px rgba(13, 237, 47, 0.9) inset;
-        
-    //     img {
-    //         width: 200%;
-    //         overflow: hidden;
-    //         filter: brightness(50%);
-    //         z-index: -1;
-    //         height: 100%;
-    //     }
-    // }
 
-    canvas {
-        display: block;
-        z-index: 5;
+    section {
+        padding: 20px;
     }
 
-    .purple-halo {
+    /************** Section 1 **************/
+    .section-1 {
+        height: 100vh;
+        backdrop-filter: brightness(1);
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+
+        //! Remove //
+        background-image: url(../img/dec1.png);
+
+        canvas {
+            display: block;
+            z-index: 0;
+        }
+    }
+
+    /************** Section 2 **************/
+    .section-2 {
+        min-height: 100vh;
+        position: relative;
+
+        h1 {
+            font-size: 3em;
+        }
+    }
+
+    .section-2::before {
+        content: "";
         position: absolute;
-        background-color: rgba(111, 20, 185, 0.411);
-        top: 33%;
-        right: 45%;
-        width: 300px;
-        height: 300px;
-        z-index: 3;
-        border-radius: 100%;
-        filter: blur(10px);
+        top: -350px;
+        background-image: linear-gradient(0deg, var(--deep-blue) 0%, rgba(255, 255, 255, 0) 100%);
+        height: 350px;
+        width: 100%;
     }
-
-    .blue-halo {
-        position: absolute;
-        background-color: rgba(0, 0, 255, 0.362);
-        top: 35%;
-        right: 45%;
-        width: 300px;
-        height: 300px;
-        z-index: 3;
-        border-radius: 100%;
-        filter: blur(10px);
-    }
-}
-
-/************** Section 2 **************/
-.section-2 {
-    min-height: 100vh;
 }
 
 /************** Footer *************/
-// footer {}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    border-top: var(--light-gray) 2px dashed;
+    position: relative;
+
+    .end-line {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -30px;
+
+        a {
+            font-size: large;
+            width: 65px;
+            height: 65px;
+            border: var(--white) 2px solid;
+            background-color: var(--deep-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            font-family: 'Poppins';
+            font-weight: 500;
+            text-decoration: none;
+            overflow: hidden;
+            position: relative;
+
+            .end,
+            .top {
+                -webkit-transition: all 0.4s ease-in-out;
+                transition: all 0.4s ease-in-out;
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                /* Ajouté pour superposer les deux éléments */
+            }
+
+            /* .top est maintenant caché par défaut avec opacity et visibility */
+            .top {
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+
+            /* .end est visible par défaut */
+            .end {
+                opacity: 1;
+                visibility: visible;
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+
+            &:hover {
+                color: var(--white);
+                font-size: larger;
+
+                /* Cache .end et déplace-le hors du cadre */
+                .end {
+                    opacity: 0;
+                    visibility: hidden;
+                    -webkit-transform: translateX(100%);
+                    transform: translateX(100%);
+                }
+
+                /* Affiche .top et déplace-le dans le cadre */
+                .top {
+                    opacity: 1;
+                    visibility: visible;
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                    -webkit-transition-delay: 0.4s;
+                    /* Retarde l'apparition de .top */
+                    transition-delay: 0.4s;
+                }
+            }
+        }
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 25px;
+
+        h5 {
+            font-size: 1.7em;
+            margin-bottom: 25px;
+        }
+
+        a:hover {
+            font-size: larger;
+            text-decoration: none;
+            color: var(--white);
+            filter: drop-shadow(var(--light-gray) 0 0 10px);
+        }
+
+        .social-icons {
+            svg {
+                width: 42px;
+                height: 42px;
+                cursor: pointer;
+                opacity: 80%;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    opacity: 100%;
+                    filter: drop-shadow(var(--light-gray) 0 0 10px);
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            width: 230px;
+
+
+        }
+    }
+
+
+    small {
+        font-weight: 300;
+    }
+}
+
+
+
+
+
+/************** Responsive *************/
+@media only screen and (max-width: 450px) {
+
+    footer {
+        .footer-content {
+            flex-direction: column;
+            gap: 35px;
+
+            h5 {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

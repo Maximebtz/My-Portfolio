@@ -29,6 +29,11 @@
     }
 }
 
+button {
+    outline: none;
+    border: none;
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -39,6 +44,7 @@ html {
     --purple: #B251EE;
     --white: ghostwhite;
     --light-gray: rgb(170, 170, 170);
+    --very-light-gray: rgb(220, 220, 220);
 }
 
 /************** Animations **************/
@@ -72,11 +78,11 @@ html {
 
 /************** Body **************/
 body {
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
-    background-color: var(--deep-blue);
-    color: var(--white);
-    font-size: medium;
+    font-family: 'Poppins', sans-serif !important;
+    min-height: 100vh !important;
+    background-color: var(--deep-blue) !important;
+    color: var(--white) !important;
+    font-size: medium !important;
 
     a {
         color: var(--light-gray);
@@ -114,7 +120,6 @@ main {
 
         //! Remove //
         background-image: url(../img/dec1.png);
-
         background-position: center;
         background-size: cover;
 
@@ -131,6 +136,7 @@ main {
         height: max-content;
         position: relative;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
 
         .picture-profil {
@@ -182,7 +188,6 @@ main {
             display: flex;
             width: 100%;
             justify-content: space-between;
-            flex-wrap: wrap;
             gap: 50px;
             padding-bottom: 25px;
 
@@ -263,6 +268,7 @@ main {
                 min-width: 300px;
                 width: 100%;
                 text-align: justify;
+                text-wrap: wrap;
                 font-size: large;
                 color: var(--light-gray);
 
@@ -356,6 +362,138 @@ main {
 
     /************** Section 3 **************/
     .section-3 {
+        
+
+        h2 {
+            color: var(--white);
+            font-size: 3.5em;
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        h3 {
+            font-size: 2em;
+        }
+
+        .container {
+            
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .project-item {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+
+                img {
+                    border-radius: 7px;
+                    height: 300px;
+                    max-width: 400px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .project-details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 15px;
+
+                    p {
+                        max-width: 600px;
+                        text-align: justify;
+                        color: var(--light-gray);
+                    }
+
+                    .skills-used {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        gap: 15px;
+
+                        .skill {
+                            min-width: 40%;
+                            width: max-content;
+
+                            .skill-top-part {
+                                display: flex;
+                                justify-content: space-between;
+
+                                span:nth-child(2) {
+                                    color: var(--light-gray);
+                                }
+                            }
+
+                            .skill-bar-background {
+                                width: 100%;
+                                background-color: var(--light-gray);
+                                border-radius: 5px;
+
+                                .skill-bar {
+                                    height: 3px;
+                                    background-color: var(--purple);
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    .see-more-btns {
+                        width: 100%;
+                        display: flex;
+                        justify-content: end;
+                        gap: 5px;
+
+                        button {
+                            height: 38px;
+                            width: 96px;
+                            border-radius: 7px;
+                            outline: none;
+                            transition: all .2s ease-in-out;
+
+                            &:first-child {
+                                background-color: var(--purple);
+                                color: var(--white);
+
+                                &:hover {
+                                    background-color: var(--very-light-gray);
+                                    color: var(--purple);
+                                }
+                            }
+
+                            &:last-child {
+                                background-color: var(--very-light-gray);
+                                color: var(--purple);
+
+                                &:hover {
+                                    background-color: var(--purple);
+                                    color: var(--white);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(even) {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row-reverse;
+                    gap: 20px;
+                    flex-wrap: wrap;
+
+                    .see-more-btns {
+                        justify-content: start;
+                    }
+                }
+            }
+        }
+    }
+
+    /************** Section 4 **************/
+    .section-4 {
 
         padding-bottom: 60px;
 
@@ -390,7 +528,7 @@ main {
             font-size: x-large;
             position: relative;
             top: -10px;
-            
+
             span {
                 font-weight: 400;
             }
@@ -692,8 +830,11 @@ footer {
             }
         }
 
-        /************** Section 3 **************/
-        .section-3 {
+        /************** Section 4 **************/
+        .section-3 {}
+
+        /************** Section 4 **************/
+        .section-4 {
 
             padding-bottom: 40px !important;
 
@@ -720,6 +861,54 @@ footer {
             h5 {
                 margin-bottom: 15px;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+
+    main {
+
+        section {
+            padding: 0 20px;
+        }
+
+        /************** Section 1 **************/
+        .section-1 {
+            
+        }
+
+        /************** Section 2 **************/
+        .section-2 {
+
+            .presentation {
+                
+            }
+
+            .travels-section {
+
+                .travel-content {
+                    
+                }
+
+                svg {
+                    
+                }
+            }
+        }
+
+        /************** Section 4 **************/
+        .section-3 {}
+
+        /************** Section 4 **************/
+        .section-4 {
+
+        }
+    }
+
+    footer {
+        .footer-content {
+            
         }
     }
 }

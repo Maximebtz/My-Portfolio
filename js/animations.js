@@ -10,3 +10,5 @@ let observer = new IntersectionObserver((entries) => {
 
 const animatedElements = document.querySelectorAll('.animation-enter');
 animatedElements.forEach(el => observer.observe(el));
+
+

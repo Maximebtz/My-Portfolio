@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel='stylesheet' href='styles/style.css'>
-  <script type="module" src="./js/canvas.js"></script>
 </head>
 
 <body>
@@ -13,7 +12,6 @@
   <main>
 
     <section class="section-1">
-      <canvas id="canvas3d"></canvas>
     </section>
 
     <section class="section-2">
@@ -39,24 +37,22 @@
             Welcome to my Portfolio
           </h1>
         </div>
-        <div class="presentation-paragraph animation-enter from-right">
-          <p>
+        <p class="presentation-paragraph animation-enter from-right">
+          I used to be an architectural designer and now I'm a web developer with a passion for design, but I'm also
+          proficient in the backend.<br><br>
 
-            I used to be an architectural designer and now I'm a web developer with a passion for design, but I'm also
-            proficient in the backend.<br><br>
+          <span class="travels">My travels</span>, including a trek on foot and hitchhiking from Stockholm to Colmar,
+          as well as a road trip in the
+          United States in a camper van, testify to my thirst for adventure and my unfailing determination.<br><br>
 
-            <span class="travels">My travels</span>, including a trek on foot and hitchhiking from Stockholm to Colmar,
-            as well as a road trip in the
-            United States in a camper van, testify to my thirst for adventure and my unfailing determination.<br><br>
+          Today, I fuse my architectural rigor with my passion for web development to create captivating digital
+          experiences.<br><br>
 
-            Today, I fuse my architectural rigor with my passion for web development to create captivating digital
-            experiences.<br><br>
+          Outside my career, I'm a man of many passions.
+          Music, with my guitar playing, photography and video-making, motorcycling and bivouacking are an integral
+          part of my life. These passions add a creative and adventurous dimension to my personality.
+        </p>
 
-            Outside my career, I'm a man of many passions.
-            Music, with my guitar playing, photography and video-making, motorcycling and bivouacking are an integral
-            part of my life. These passions add a creative and adventurous dimension to my personality.
-          </p>
-        </div>
         <div style="display: none;" id="travels-section" class="travels-section">
           <div class="close-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
@@ -201,61 +197,223 @@
     </section>
 
     <section class="section-3">
-      <div class="section-3">
-        <h2 class="animation-enter">Experiences <br><a class="animation-enter" href="./doc/CV-Bertuzzi-Maxime.pdf" download="Bertuzzi-Maxime-CV.pdf">Download the CV here!</a></h2>
-        <h3 class="animation-enter">Jobs</h3>
-        <div class="timeline">
-          <div class="timeline-items">
-            <div class="timeline-item animation-enter from-right" data-year="2021/2022">
-              <div class="timeline-marker"></div>
-              <div class="experience-content">
-                <h4>MYDESIGNER <span>- Freelance Architectural Designer (2021 - 2022)</span></h4>
+      <h2>Projects</h2>
+      <div class="container">
+        <div class="project-item animation-enter from-left">
+          <img src="./img/Projects/Stellar.png" alt="Stellar Image" class="project-image">
+          <div class="project-details">
+            <h3>Stellar</h3>
+            <p>Stellar is an atypical holiday accommodation rental site that was my end-of-year project for my Bac +2
+              exam. It uses Google Maps API to retrieve listings on a map, Stripe for payments, Symfony for the Back-End
+              and twig, CSS and Javascript for the Front-End. There's also an AJAX-based filter search to make it easier
+              to find the ads you want.</p>
+            <div class="skills-used">
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>Twig</span>
+                  <span>9%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 9%;"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>CSS</span>
+                  <span>24%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 24%;"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>JavaScript</span>
+                  <span>50%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 50%;"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>Symfony</span>
+                  <span>16%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 16%;"></div>
+                </div>
               </div>
             </div>
-            <div class="timeline-item animation-enter from-right" data-year="2021">
-              <div class="timeline-marker"></div>
-              <div class="experience-content">
-                <h4>REM/AX <span>- Independent Real Estate Agent (2021)</span></h4>
-              </div>
-            </div>
-            <div class="timeline-item animation-enter from-right" data-year="2019/2020">
-              <div class="timeline-marker"></div>
-              <div class="experience-content">
-                <h4>MAXIMO <span>- Frozen Food Delivery Driver (2019 - 2020)</span></h4>
-              </div>
-            </div>
-            <div class="timeline-item animation-enter from-right" data-year="2019">
-              <div class="timeline-marker"></div>
-              <div class="experience-content">
-                <h4>URBAN LOG/IN <span>- Architectural Designer (2019)</span></h4>
-              </div>
+            <div class="see-more-btns">
+              <button>See More</button>
+              <button>Github</button>
             </div>
           </div>
         </div>
+        <div class="project-item animation-enter from-right">
+          <img src="./img/Projects/Stellar.png" alt="Stellar Image" class="project-image">
+          <div class="project-details">
+            <h3>Stellar</h3>
+            <p>Stellar is an atypical holiday accommodation rental site that was my end-of-year project for my Bac +2
+              exam. It uses Google Maps API to retrieve listings on a map, Stripe for payments, Symfony for the Back-End
+              and twig, CSS and Javascript for the Front-End. There's also an AJAX-based filter search to make it easier
+              to find the ads you want.</p>
+            <div class="skills-used">
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>Twig</span>
+                  <span>9%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 9%;"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>CSS</span>
+                  <span>24%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 24%;"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>JavaScript</span>
+                  <span>50%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 50%;"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>Symfony</span>
+                  <span>16%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 16%;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="see-more-btns">
+              <button>See More</button>
+              <button>Github</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-item animation-enter from-left">
+          <img src="./img/Projects/Stellar.png" alt="Stellar Image" class="project-image">
+          <div class="project-details">
+            <h3>Stellar</h3>
+            <p>Stellar is an atypical holiday accommodation rental site that was my end-of-year project for my Bac +2
+              exam. It uses Google Maps API to retrieve listings on a map, Stripe for payments, Symfony for the Back-End
+              and twig, CSS and Javascript for the Front-End. There's also an AJAX-based filter search to make it easier
+              to find the ads you want.</p>
+            <div class="skills-used">
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>Twig</span>
+                  <span>9%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 9%;"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>CSS</span>
+                  <span>24%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 24%;"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>JavaScript</span>
+                  <span>50%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 50%;"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top-part">
+                  <span>Symfony</span>
+                  <span>16%</span>
+                </div>
+                <div class="skill-bar-background">
+                  <div class="skill-bar" style="width: 16%;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="see-more-btns">
+              <button>See More</button>
+              <button>Github</button>
+            </div>
+          </div>
+        </div>
+        <!-- Répéter pour chaque projet -->
+      </div>
+    </section>
 
-        <h3 class="animation-enter">Education</h3>
-        <div class="timeline">
-          <div class="timeline-items">
-            <div class="timeline-item animation-enter from-right" data-year="2023">
-              <div class="timeline-marker"></div>
-              <div class="experience-content">
-                <h4>ELAN FORMATION <span>- Web / Mobile Developer (BAC+2 Level)</span></h4>
-              </div>
+    <section class="section-4">
+      <h2 class="animation-enter">Experiences <br><a class="animation-enter" href="./doc/CV-Bertuzzi-Maxime.pdf"
+          download="Bertuzzi-Maxime-CV.pdf">Download the CV here!</a></h2>
+      <h3 class="animation-enter">Jobs</h3>
+      <div class="timeline">
+        <div class="timeline-items">
+          <div class="timeline-item animation-enter from-right" data-year="2021/2022">
+            <div class="timeline-marker"></div>
+            <div class="experience-content">
+              <h4>MYDESIGNER <span>- Freelance Architectural Designer (2021 - 2022)</span></h4>
             </div>
-            <div class="timeline-item animation-enter from-right" data-year="2020/2021">
-              <div class="timeline-marker"></div>
-              <div class="experience-content">
-                <h4>AFPA <span>- Building Project Design Technician (BAC Level)</span></h4>
-              </div>
+          </div>
+          <div class="timeline-item animation-enter from-right" data-year="2021">
+            <div class="timeline-marker"></div>
+            <div class="experience-content">
+              <h4>REM/AX <span>- Independent Real Estate Agent (2021)</span></h4>
             </div>
-            <div class="timeline-item animation-enter from-right" data-year="2020/2021">
-              <div class="timeline-marker"></div>
-              <div class="experience-content">
-                <h4>Lycée Blaise Pascal <span>- Sciences and Technologies for Industry and Sustainable Development
+          </div>
+          <div class="timeline-item animation-enter from-right" data-year="2019/2020">
+            <div class="timeline-marker"></div>
+            <div class="experience-content">
+              <h4>MAXIMO <span>- Frozen Food Delivery Driver (2019 - 2020)</span></h4>
+            </div>
+          </div>
+          <div class="timeline-item animation-enter from-right" data-year="2019">
+            <div class="timeline-marker"></div>
+            <div class="experience-content">
+              <h4>URBAN LOG/IN <span>- Architectural Designer (2019)</span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="animation-enter">Education</h3>
+      <div class="timeline">
+        <div class="timeline-items">
+          <div class="timeline-item animation-enter from-right" data-year="2023">
+            <div class="timeline-marker"></div>
+            <div class="experience-content">
+              <h4>ELAN FORMATION <span>- Web / Mobile Developer (BAC+2 Level)</span></h4>
+            </div>
+          </div>
+          <div class="timeline-item animation-enter from-right" data-year="2020/2021">
+            <div class="timeline-marker"></div>
+            <div class="experience-content">
+              <h4>AFPA <span>- Building Project Design Technician (BAC Level)</span></h4>
+            </div>
+          </div>
+          <div class="timeline-item animation-enter from-right" data-year="2020/2021">
+            <div class="timeline-marker"></div>
+            <div class="experience-content">
+              <h4>Lycée Blaise Pascal <span>- Sciences and Technologies for Industry and Sustainable Development
                   (Architecture Spéciality)</span>
-                </h4>
-                
-              </div>
+              </h4>
+
             </div>
           </div>
         </div>
@@ -317,6 +475,7 @@
 
   </footer>
 </body>
+<script type="module" src="./js/canvas.js"></script>
 <script src="./js/rocket.js"></script>
 <script src="./js/animations.js"></script>
 <script src="./js/travels.js"></script>

@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "animated-scroll-to": "^2.3.0"
+    "@splinetool/runtime": "^0.9.521",
+    "animated-scroll-to": "^2.3.0",
+    "flowbite": "^2.2.0"
   }
 }

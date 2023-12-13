@@ -29,6 +29,11 @@
   z-index: 5;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -38,6 +43,7 @@ html {
   --purple: #B251EE;
   --white: ghostwhite;
   --light-gray: rgb(170, 170, 170);
+  --very-light-gray: rgb(220, 220, 220);
 }
 
 /************** Animations **************/
@@ -69,11 +75,11 @@ html {
 
 /************** Body **************/
 body {
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-  background-color: var(--deep-blue);
-  color: var(--white);
-  font-size: medium;
+  font-family: "Poppins", sans-serif !important;
+  min-height: 100vh !important;
+  background-color: var(--deep-blue) !important;
+  color: var(--white) !important;
+  font-size: medium !important;
 }
 body a {
   color: var(--light-gray);
@@ -94,6 +100,7 @@ main {
   /************** Section 1 **************/
   /************** Section 2 **************/
   /************** Section 3 **************/
+  /************** Section 4 **************/
 }
 main section {
   min-height: 100vh;
@@ -125,6 +132,7 @@ main .section-2 {
   height: max-content;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 main .section-2 .picture-profil {
@@ -169,7 +177,6 @@ main .section-2 .presentation {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 50px;
   padding-bottom: 25px;
 }
@@ -227,6 +234,7 @@ main .section-2 .presentation-paragraph {
   min-width: 300px;
   width: 100%;
   text-align: justify;
+  text-wrap: wrap;
   font-size: large;
   color: var(--light-gray);
 }
@@ -305,43 +313,150 @@ main .section-2::before {
   height: 350px;
   width: 100%;
 }
-main .section-3 {
+main .section-3 h2 {
+  color: var(--white);
+  font-size: 3.5em;
+  text-align: center;
+  padding-bottom: 40px;
+}
+main .section-3 h3 {
+  font-size: 2em;
+}
+main .section-3 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+main .section-3 .container .project-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+main .section-3 .container .project-item img {
+  border-radius: 7px;
+  height: 300px;
+  max-width: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .section-3 .container .project-item .project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+main .section-3 .container .project-item .project-details p {
+  max-width: 600px;
+  text-align: justify;
+  color: var(--light-gray);
+}
+main .section-3 .container .project-item .project-details .skills-used {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+}
+main .section-3 .container .project-item .project-details .skills-used .skill {
+  min-width: 40%;
+  width: -moz-max-content;
+  width: max-content;
+}
+main .section-3 .container .project-item .project-details .skills-used .skill .skill-top-part {
+  display: flex;
+  justify-content: space-between;
+}
+main .section-3 .container .project-item .project-details .skills-used .skill .skill-top-part span:nth-child(2) {
+  color: var(--light-gray);
+}
+main .section-3 .container .project-item .project-details .skills-used .skill .skill-bar-background {
+  width: 100%;
+  background-color: var(--light-gray);
+  border-radius: 5px;
+}
+main .section-3 .container .project-item .project-details .skills-used .skill .skill-bar-background .skill-bar {
+  height: 3px;
+  background-color: var(--purple);
+  border-radius: 5px;
+}
+main .section-3 .container .project-item .project-details .see-more-btns {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+}
+main .section-3 .container .project-item .project-details .see-more-btns button {
+  height: 38px;
+  width: 96px;
+  border-radius: 7px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+main .section-3 .container .project-item .project-details .see-more-btns button:first-child {
+  background-color: var(--purple);
+  color: var(--white);
+}
+main .section-3 .container .project-item .project-details .see-more-btns button:first-child:hover {
+  background-color: var(--very-light-gray);
+  color: var(--purple);
+}
+main .section-3 .container .project-item .project-details .see-more-btns button:last-child {
+  background-color: var(--very-light-gray);
+  color: var(--purple);
+}
+main .section-3 .container .project-item .project-details .see-more-btns button:last-child:hover {
+  background-color: var(--purple);
+  color: var(--white);
+}
+main .section-3 .container .project-item:nth-child(even) {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+main .section-3 .container .project-item:nth-child(even) .see-more-btns {
+  justify-content: start;
+}
+main .section-4 {
   padding-bottom: 60px;
 }
-main .section-3 h2 {
+main .section-4 h2 {
   color: var(--white);
   font-size: 3.5em;
   padding-top: 70px;
   text-align: center;
   line-height: 0.5em;
 }
-main .section-3 h2 a {
+main .section-4 h2 a {
   font-size: 0.3em;
   position: relative;
   left: 25px;
   font-weight: 400;
 }
-main .section-3 h2 a:hover {
+main .section-4 h2 a:hover {
   color: var(--purple);
   text-decoration: none;
 }
-main .section-3 h3 {
+main .section-4 h3 {
   font-size: 3.2em;
   padding: 50px 0;
 }
-main .section-3 h4 {
+main .section-4 h4 {
   font-size: x-large;
   position: relative;
   top: -10px;
 }
-main .section-3 h4 span {
+main .section-4 h4 span {
   font-weight: 400;
 }
-main .section-3 .timeline {
+main .section-4 .timeline {
   position: relative;
   padding-left: 7px;
 }
-main .section-3 .timeline .timeline-items {
+main .section-4 .timeline .timeline-items {
   position: relative;
   min-height: 400px;
   height: -moz-max-content;
@@ -350,7 +465,7 @@ main .section-3 .timeline .timeline-items {
   flex-direction: column;
   justify-content: space-between;
 }
-main .section-3 .timeline .timeline-items::before {
+main .section-4 .timeline .timeline-items::before {
   content: "";
   position: absolute;
   left: -6px;
@@ -360,7 +475,7 @@ main .section-3 .timeline .timeline-items::before {
   background-color: var(--light-gray);
   z-index: 0;
 }
-main .section-3 .timeline .timeline-marker {
+main .section-4 .timeline .timeline-marker {
   position: absolute;
   left: -13px;
   width: 16px;
@@ -369,14 +484,14 @@ main .section-3 .timeline .timeline-marker {
   background: var(--white);
   opacity: 0;
 }
-main .section-3 .timeline .experience-content {
+main .section-4 .timeline .experience-content {
   padding-left: 20px;
 }
-main .section-3 .timeline .timeline-item {
+main .section-4 .timeline .timeline-item {
   position: relative;
   margin-bottom: 20px;
 }
-main .section-3 .timeline .timeline-item.visible .timeline-marker {
+main .section-4 .timeline .timeline-item.visible .timeline-marker {
   animation: fade-in-scale 0.4s 1.5s ease-in-out both;
 }
 @keyframes fade-in-scale {
@@ -536,7 +651,8 @@ footer small {
   main {
     /************** Section 1 **************/
     /************** Section 2 **************/
-    /************** Section 3 **************/
+    /************** Section 4 **************/
+    /************** Section 4 **************/
   }
   main section {
     padding: 0 20px;
@@ -561,17 +677,17 @@ footer small {
     max-width: 100%;
     max-height: 300px !important;
   }
-  main .section-3 {
+  main .section-4 {
     padding-bottom: 40px !important;
   }
-  main .section-3 h2 {
+  main .section-4 h2 {
     font-size: 14vw;
   }
-  main .section-3 h3 {
+  main .section-4 h3 {
     font-size: 13vw;
     padding: 50px 0;
   }
-  main .section-3 h4 {
+  main .section-4 h4 {
     font-size: 8vw;
   }
   footer .footer-content {
@@ -580,5 +696,16 @@ footer small {
   }
   footer .footer-content h5 {
     margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 1130px) {
+  main {
+    /************** Section 1 **************/
+    /************** Section 2 **************/
+    /************** Section 4 **************/
+    /************** Section 4 **************/
+  }
+  main section {
+    padding: 0 20px;
   }
 }/*# sourceMappingURL=style.css.map */
